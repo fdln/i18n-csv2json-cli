@@ -20,7 +20,8 @@ function writeFile({ options, files, result }) {
       const fileContent = format ?
         JSON.stringify(result[key], null, 2) :
         JSON.stringify(result[key]);
-      const fileName = `${key}.i18n.json`;
+//       const fileName = `${key}.i18n.json`;
+      const fileName = `${key}.json`;
       const filePath = `${toPath}${fileName}`;
 
       fs.writeFile(filePath, fileContent, () => {
