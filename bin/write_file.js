@@ -26,7 +26,8 @@ function writeFile(_ref) {
     var _loop = function _loop(i, len) {
       var key = files[i];
       var fileContent = format ? JSON.stringify(result[key], null, 2) : JSON.stringify(result[key]);
-      var fileName = key + '.i18n.json';
+//       var fileName = key + '.i18n.json';
+      var fileName = key + '.json';
       var filePath = '' + toPath + fileName;
 
       fs.writeFile(filePath, fileContent, function () {
